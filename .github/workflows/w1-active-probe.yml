@@ -1,5 +1,6 @@
 name: W1 active internal probing
 
+# Frozen evaluation runner. The preregistration predates this execution.
 on:
   push:
     paths:
