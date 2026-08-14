@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WildIdea — Active Internal Probing</title>
+<style>
+:root{
+  --bg:#0a0f12; --panel:#11191d; --panel2:#162228; --text:#e8f1ee;
+  --muted:#91a6a0; --line:#26373d; --cyan:#4de3c1; --lime:#b7ef5b;
+  --amber:#ffc45c; --red:#ff6f61; --blue:#77bdfb; --ink:#07100f;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace}
+a{color:var(--cyan)}
+.wrap{max-width:1180px;margin:auto;padding:28px}
+.hero{padding:72px 0 38px;border-bottom:1px solid var(--line)}
+.kicker{color:var(--cyan);letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(40px,7vw,88px);line-height:.95;margin:10px 0 18px;letter-spacing:-.05em}
+h2{font-size:28px;margin:56px 0 18px} h3{margin:0 0 8px}
+.lede{max-width:820px;font-size:20px;color:#bfd0ca}
+.quote{margin:28px 0;padding:18px 22px;border-left:3px solid var(--cyan);background:#0d1518;font-size:20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.two{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.big{font-size:34px;font-weight:800;color:var(--lime)}.small{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.rule{height:1px;background:var(--line);margin:18px 0}
+pre{white-space:pre-wrap;background:#070b0d;border:1px solid var(--line);padding:16px;border-radius:10px;color:#cfe3dc;overflow:auto}
+.ladder{display:grid;gap:12px}.step{display:grid;grid-template-columns:110px 1fr auto;gap:16px;align-items:center;padding:14px 16px;background:var(--panel);border:1px solid var(--line);border-radius:12px}.step strong{color:var(--cyan)}
+.pass{color:var(--lime)}
+.demo{background:linear-gradient(180deg,#111b20,#0c1316);border:1px solid #2b424a;border-radius:16px;padding:18px}
+.controls{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 18px}
+button,select{font:inherit;background:#17242a;color:var(--text);border:1px solid #38515a;border-radius:8px;padding:9px 12px}button{cursor:pointer}button:hover{border-color:var(--cyan)}
+#ring{width:100%;height:auto;background:#081013;border:1px solid var(--line);border-radius:12px}
+.posterior{display:grid;grid-template-columns:repeat(8,1fr);gap:6px;margin-top:12px;height:150px;align-items:end}.barWrap{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:4px}.bar{width:100%;min-height:2px;background:var(--cyan);border-radius:4px 4px 0 0;transition:height .3s}.lab{font-size:11px;color:var(--muted)}
+.log{min-height:110px;background:#070b0d;border:1px solid var(--line);border-radius:10px;padding:12px;color:#c4d5cf;font-size:13px}
+.chartRow{display:grid;grid-template-columns:180px 1fr 70px;gap:12px;align-items:center;margin:8px 0}.track{height:14px;background:#091114;border-radius:99px;overflow:hidden}.fill{height:100%;background:var(--cyan)}
+.note{font-size:13px;color:var(--muted)}
+.footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);color:var(--muted)}
+.badge{display:inline-block;border:1px solid #376258;color:var(--lime);padding:4px 8px;border-radius:99px;font-size:12px}
+@media(max-width:800px){.grid,.two{grid-template-columns:1fr}.step{grid-template-columns:1fr}.posterior{height:120px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<section class="hero">
+  <div class="kicker">WildIdea / 2026-08-14</div>
+  <h1>Touch the medium.<br>Read what comes back.</h1>
+  <p class="lede">A ridiculous old wave-field scout returned as a much smaller engineering question: can a tiny local process learn more by <b>perturbing</b> a dynamical medium than by merely watching it?</p>
+  <div class="quote">external action = move through world-space<br><br>internal probe = move information through possibility-space</div>
+  <p class="note">This page is not a consciousness claim. It is an evidence-led record of three frozen toy benchmarks.</p>
+</section>
+
+<h2>The result ladder</h2>
+<div class="ladder">
+  <div class="step"><strong>W1</strong><div>Scheduled local read+write scout versus passive global/local readouts and equal-energy uncontrolled writes.</div><span class="pass">PASS</span></div>
+  <div class="step"><strong>W1b</strong><div>Rotate probe order, fresh episodes, five fixed observer maps. Attack the lucky-schedule explanation.</div><span class="pass">PASS</span></div>
+  <div class="step"><strong>W2</strong><div>Eight possible hidden locations, only three probes. Let what came back from one ping choose where the next ping goes.</div><span class="pass">PASS</span></div>
+</div>
+
+<div class="grid" style="margin-top:16px">
+  <div class="card"><div class="small">W1 active read+write</div><div class="big">50.0%</div><div>strongest passive 30.875%</div></div>
+  <div class="card"><div class="small">W1b mean active</div><div class="big">45.525%</div><div>mean passive advantage +19.3 pts</div></div>
+  <div class="card"><div class="small">W2 adaptive 3-probe</div><div class="big">72.6875%</div><div>best fixed 67.1875%</div></div>
+</div>
+
+<h2>What W2 actually tested</h2>
+<div class="two">
+  <div class="card">
+    <p>A 64-site damped wave ring had one hidden high-damping region at one of eight candidate addresses. A probe injected the same local pulse every time and reduced the short ring-down to one scalar receipt:</p>
+    <pre>receipt = log(late local energy / early local energy)</pre>
+    <p>All active policies used the same learned Gaussian response table and the same three-write budget.</p>
+    <p>The only important difference was <b>where the next probe went</b>.</p>
+  </div>
+  <div class="card">
+    <div class="small">Held-out W2 accuracy</div>
+    <div class="chartRow"><span>random 3</span><div class="track"><div class="fill" style="width:62.25%"></div></div><b>62.25</b></div>
+    <div class="chartRow"><span>best fixed 3</span><div class="track"><div class="fill" style="width:67.1875%"></div></div><b>67.19</b></div>
+    <div class="chartRow"><span>adaptive 3</span><div class="track"><div class="fill" style="width:72.6875%"></div></div><b>72.69</b></div>
+    <div class="rule"></div>
+    <div>adaptive − fixed: <b class="pass">+5.50 points</b></div>
+    <div>paired bootstrap 95% CI: <b>[+2.31, +8.69]</b></div>
+  </div>
+</div>
+
+<h2>Interactive W2 illustration</h2>
+<div class="demo">
+  <p class="note">This browser toy uses the frozen W2 response model below. It is an illustration of the inference loop, not a replacement for the GitHub Actions evidence.</p>
+  <div class="controls">
+    <select id="mode"><option value="adaptive">adaptive 3-probe</option><option value="fixed">best fixed 3-probe</option><option value="random">random 3-probe</option></select>
+    <button id="newBtn">new hidden medium</button>
+    <button id="probeBtn">run next probe</button>
+    <button id="allBtn">run all 3</button>
+    <button id="revealBtn">reveal defect</button>
+  </div>
+  <svg id="ring" viewBox="0 0 760 410" aria-label="ring probe demo"></svg>
+  <div class="posterior" id="posterior"></div>
+  <div class="log" id="log"></div>
+</div>
+
+<h2>What survived the tests</h2>
+<div class="two">
+  <div class="card">
+    <h3>Scheduled probing survived</h3>
+    <p>W1's first confusion matrix had a suspicious class-order asymmetry. W1b randomized the starting probe phase, balanced it within class, changed the observer map five times, and the active margin stayed near twenty points.</p>
+    <span class="badge">schedule artifact attacked</span>
+  </div>
+  <div class="card">
+    <h3>Probe choice itself mattered</h3>
+    <p>W2's adaptive policy produced 13 distinct three-probe sequences. The second and third address depended on the earlier receipt. It beat the strongest fixed three-probe design selected from the same learned response model.</p>
+    <span class="badge">state → next action</span>
+  </div>
+</div>
+
+<h2>What this is <em>not</em></h2>
+<div class="card">
+  <p>It is not evidence that consciousness is a scout, that brains use this exact mechanism, or that active sensing is new. W2 is squarely in Bayesian experimental-design / system-identification territory.</p>
+  <p>Also, W2 deliberately resets the low-energy field before each probe trial. That makes the adaptive-choice result clean, but it means we have <b>not yet tested the stronger surfing picture</b> in which every probe changes one continuously evolving medium that later probes inherit.</p>
+</div>
+
+<h2>The next honest question: W3</h2>
+<div class="card">
+<pre>persistent medium z(t)
+      ↑        ↓
+   write     local read
+      ↑        ↓
+      tiny controller
+          │
+          └── chooses next probe from current consequence</pre>
+<p>Can a tiny controller keep a changing field informative without resetting it, while beating fixed and random probing under the same action and compute budget?</p>
+<p>That would be closer to the original "surfing" intuition. It should be tested as engineering first.</p>
+</div>
+
+<h2>Receipts</h2>
+<div class="grid">
+  <div class="card"><a href="docs/PREREG_W1.md">W1 preregistration</a><br><a href="docs/W1_RESULT.md">W1 result</a></div>
+  <div class="card"><a href="docs/PREREG_W1B.md">W1b preregistration</a><br><a href="docs/W1B_RESULT.md">W1b result</a></div>
+  <div class="card"><a href="docs/PREREG_W2.md">W2 preregistration</a><br><a href="docs/W2_RESULT.md">W2 result</a></div>
+</div>
+
+<div class="footer">WildIdea — build the machine first; argue about the mind later.</div>
+</div>
+<script>
+const centers=[4,12,20,28,36,44,52,60];
+const means=[
+[1.1666973844,1.2599528312,1.3384812479,1.3529041924,1.3467377849,1.3480124361,1.3430801383,1.2573161784],
+[1.2591069993,1.1744945452,1.2575144938,1.3389681841,1.3543871903,1.3528392880,1.3517652738,1.3356822500],
+[1.3375062935,1.2583400077,1.1676098614,1.2543405531,1.3388042701,1.3504729206,1.3493824663,1.3470811221],
+[1.3493021125,1.3360572499,1.2555824787,1.1706846803,1.2586172399,1.3411550325,1.3509247609,1.3519370817],
+[1.3515944587,1.3576787524,1.3399014585,1.2564683393,1.1700503989,1.2574253025,1.3345622735,1.3469767525],
+[1.3523820836,1.3554134076,1.3525868080,1.3393962756,1.2573747576,1.1710580501,1.2549144954,1.3367746956],
+[1.3375388620,1.3462125291,1.3517928767,1.3453962918,1.3340535880,1.2545591539,1.1694728685,1.2546764955],
+[1.2522408018,1.3386303203,1.3507348600,1.3556622213,1.3545461883,1.3404388884,1.2570365510,1.1667569883]
+];
+const variance=[.0024852525,.0024780670,.0023987252,.0024702631,.0022906777,.0023130839,.0023281657,.0022918041];
+const fixed=[1,3,7];
+let hidden=0,posterior=[],used=[],round=0,revealed=false,randomSchedule=[];
+const svg=document.getElementById('ring'),log=document.getElementById('log'),postEl=document.getElementById('posterior');
+function gaussian(){let u=0,v=0;while(!u)u=Math.random();while(!v)v=Math.random();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+function norm(a){const s=a.reduce((x,y)=>x+y,0);return a.map(x=>x/s)}
+function infoScore(p){let m=posterior.reduce((s,q,c)=>s+q*means[c][p],0);let vv=posterior.reduce((s,q,c)=>s+q*(means[c][p]-m)**2,0);return vv/variance[p]}
+function nextProbe(){const mode=document.getElementById('mode').value;if(mode==='fixed')return fixed[round];if(mode==='random')return randomSchedule[round];if(round===0)return 0;let best=-1,bv=-Infinity;for(let p=0;p<8;p++){if(used.includes(p))continue;let s=infoScore(p);if(s>bv){bv=s;best=p}}return best}
+function updatePosterior(y,p){let ls=posterior.map((q,c)=>q*Math.exp(-.5*(y-means[c][p])**2/variance[p]));posterior=norm(ls)}
+function draw(ping=-1){svg.innerHTML='';const cx=380,cy=200,R=145;let s='<circle cx="380" cy="200" r="145" fill="none" stroke="#26373d" stroke-width="2"/>';
+for(let i=0;i<8;i++){let a=-Math.PI/2+2*Math.PI*i/8,x=cx+R*Math.cos(a),y=cy+R*Math.sin(a);let fill='#17242a';if(used.includes(i))fill='#4de3c1';if(revealed&&i===hidden)fill='#ff6f61';if(i===ping)fill='#ffc45c';s+=`<circle cx="${x}" cy="${y}" r="18" fill="${fill}" stroke="#d7ebe4" stroke-width="1"/><text x="${x}" y="${y+5}" text-anchor="middle" fill="#07100f" font-size="12">${i}</text>`}
+s+='<text x="380" y="194" text-anchor="middle" fill="#e8f1ee" font-size="16">hidden damping region</text><text x="380" y="218" text-anchor="middle" fill="#91a6a0" font-size="13">3 probes / 8 candidate addresses</text>';svg.innerHTML=s;renderPosterior()}
+function renderPosterior(){postEl.innerHTML=posterior.map((q,i)=>`<div class="barWrap"><div class="bar" style="height:${Math.max(2,q*100)}%"></div><div class="lab">${i}<br>${(100*q).toFixed(0)}%</div></div>`).join('')}
+function reset(){hidden=Math.floor(Math.random()*8);posterior=Array(8).fill(1/8);used=[];round=0;revealed=false;randomSchedule=[...Array(8).keys()].sort(()=>Math.random()-.5).slice(0,3);log.textContent='new medium. hidden class concealed. choose a policy and probe.';draw()}
+function probe(){if(round>=3){log.textContent+='\nprobe budget exhausted.';return}let p=nextProbe();used.push(p);let y=means[hidden][p]+Math.sqrt(variance[p])*gaussian();updatePosterior(y,p);round++;let guess=posterior.indexOf(Math.max(...posterior));log.textContent+=`\nprobe ${round}: address ${p} (site ${centers[p]}) → receipt ${y.toFixed(3)} → current guess ${guess}`;draw(p);if(round===3)log.textContent+=`\nfinal guess ${guess}. ${guess===hidden?'correct':'wrong'}${revealed?' (hidden '+hidden+')':''}`}
+document.getElementById('newBtn').onclick=reset;document.getElementById('probeBtn').onclick=probe;document.getElementById('allBtn').onclick=()=>{while(round<3)probe()};document.getElementById('revealBtn').onclick=()=>{revealed=true;draw();log.textContent+=`\nhidden class = ${hidden}, site ${centers[hidden]}`};document.getElementById('mode').onchange=reset;reset();
+</script>
+</body>
+</html>
