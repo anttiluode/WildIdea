@@ -1,0 +1,32 @@
+name: W1 active internal probing
+
+on:
+  push:
+    paths:
+      - "wildidea_w1.py"
+      - "tests/test_w1.py"
+      - "docs/PREREG_W1.md"
+      - ".github/workflows/w1-active-probe.yml"
+  workflow_dispatch:
+
+jobs:
+  w1:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install NumPy
+        run: python -m pip install numpy
+      - name: Mechanism tests
+        run: python -m unittest discover -s tests -v
+      - name: Run frozen W1 benchmark
+        run: python wildidea_w1.py --json artifacts/w1_result.json
+      - name: Show frozen result
+        run: cat artifacts/w1_result.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w1-active-probe-result
+          path: artifacts/w1_result.json
