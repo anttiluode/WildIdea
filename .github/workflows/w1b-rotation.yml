@@ -1,0 +1,40 @@
+name: W1b rotation robustness
+
+on:
+  push:
+    paths:
+      - "wildidea_w1b.py"
+      - "docs/PREREG_W1B.md"
+      - ".github/workflows/w1b-rotation.yml"
+  workflow_dispatch:
+
+jobs:
+  w1b:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install NumPy
+        run: python -m pip install numpy
+      - name: Rotation invariants
+        run: |
+          python - <<'PY'
+          import wildidea_w1 as w1
+          import wildidea_w1b as b
+          for phase in range(4):
+              hits = tuple(b.rotated_scan_position(t, phase) for t in w1.PULSE_TIMES)
+              expected = tuple(w1.DEFECT_CENTERS[(phase+i)%4] for i in range(4))
+              assert hits == expected, (phase, hits, expected)
+          print('rotation invariants ok')
+          PY
+      - name: Run frozen W1b audit
+        run: python wildidea_w1b.py --json artifacts/w1b_result.json
+      - name: Show result
+        run: cat artifacts/w1b_result.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: w1b-rotation-result
+          path: artifacts/w1b_result.json
